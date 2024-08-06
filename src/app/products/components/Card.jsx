@@ -9,7 +9,7 @@ function Card({ item }) {
     return (
         <div className='bg-white relative rounded-t-2xl overflow-hidden'>
             <Link href={`/products/${item.slug}`} className='relative block h-[250px]'>
-                <Image blurDataURL={item.image.placeholder} placeholder='blur' src={item.image.path} fill alt={item.title} />
+                <Image blurDataURL={item.image.placeholder} placeholder='blur' src={item.image.path} sizes="(min-width: 808px) 50vw, 100vw" fill alt={item.name} />
             </Link>
             <Link href={"/"}>
                 <Image className='top-5 right-5 absolute hover:opacity-70' width={37} height={37} src={whatsAppIcon} alt='whatsApp' />

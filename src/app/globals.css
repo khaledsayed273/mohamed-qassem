@@ -25,7 +25,6 @@ body {
 
 .slider-section button.slick-arrow {
     position: absolute !important;
-    background-color: white !important;
     padding: 5px;
     top: 115% !important;
 }
@@ -55,7 +54,6 @@ body {
 
 .sale-slider button.slick-arrow {
     position: absolute !important;
-    background-color: white !important;
     padding: 5px;
     top: 125% !important;
 }
@@ -92,7 +90,6 @@ body {
 
     .sale-slider button.slick-arrow {
         position: absolute !important;
-        background-color: white !important;
         padding: 5px;
         top: 50% !important;
         z-index: 2;

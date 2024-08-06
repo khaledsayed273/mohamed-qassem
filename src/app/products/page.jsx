@@ -2,30 +2,34 @@ import React from 'react'
 import Card from './components/Card'
 import SideBar from './components/SideBar'
 import Link from 'next/link'
+import { redirect } from 'next/navigation'
 
 const getProducts = async (category) => {
-  const baseUrl = process.env.baseUrl
-
-
-  try {
-    const req = await fetch(`${baseUrl}/products${category ? `?filter[category_slug]=${category}` : ""}`, { next: { revalidate: 3600 } })
-    const res = await req.json()
-    const data = await res.data
-    return data
-  } catch (e) {
-    return e
-  }
+    const baseUrl = process.env.baseUrl
+    try {
+        const req = await fetch(`${baseUrl}/products${category ? `?filter[category_slug]=${category}` : ""}`, { next: { revalidate: 3600 } })
+        const res = await req.json()
+        const data = await res.data
+        return data
+    } catch (e) {
+        return e
+    }
 
 }
 
-async function page({searchParams}) {
+async function page({ searchParams }) {
 
-    const products = await getProducts(searchParams.category)    
+    const products = await getProducts(searchParams.category)
 
     const data = await products.data
+
+    if (data.length < 1) {
+        redirect("/")
+    }
+
     return (
         <main>
-            <div className='container mx-auto my-20 md:my-28 px-2 md:px-5'>
+            <div className='container mx-auto mt-20 md:mt-28 px-2 md:px-5'>
                 <div className='mb-5 text-sm text-gray-400'>
                     <Link className='me-2' href={"/products"}>الاقسام</Link>
                     {`>`}

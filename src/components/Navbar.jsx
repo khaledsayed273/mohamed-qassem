@@ -41,30 +41,38 @@ function Navbar() {
                                 <path d="M5 0L9.33013 7.5H0.669873L5 0Z" fill="#6D897A" />
                             </svg>
                             <ul className={`${showDropDown ? "block" : "hidden"}  border-t-color2 border-t-2 text-gray-500 overflow-auto max-h-[240px] z-10 px-3 w-[188px] bg-white absolute left-1/2 -translate-x-1/2 top-14`}>
-                                <li className='my-4 md:my-5 text-xs hover:opacity-70'><Link onClick={() => {
+                                <li className='my-4 md:my-5 text-xs hover:opacity-70'>
+                                    <Link className='block' onClick={() => {
+                                        setShowDropDown(false)
+                                        setShowNav(false)
+                                    }} href={"/products"}>
+                                        جميع الاقسام
+                                    </Link>
+                                </li>
+                                <li className='my-4 md:my-5 text-xs hover:opacity-70'><Link className='block' onClick={() => {
                                     setShowDropDown(false)
                                     setShowNav(false)
-                                }} href={"/products"}>جميع الاقسام</Link></li>
-                                <li className='my-4 md:my-5 text-xs hover:opacity-70'><Link onClick={() => {
-                                    setShowDropDown(false)
-                                    setShowNav(false)
-                                }} href={`/products?category=aalb-tort`}>علب تورت</Link></li>
-                                <li className='my-4 md:my-5 text-xs hover:opacity-70'><Link onClick={() => {
-                                    setShowDropDown(false)
-                                    setShowNav(false)
-                                }} href={`/products?category=aalb-alshykolat`}>علب الشيكولاته</Link></li>
-                                <li className='my-4 md:my-5 text-xs hover:opacity-70'><Link onClick={() => {
-                                    setShowDropDown(false)
-                                    setShowNav(false)
-                                }} href={"/"}>اطباق ايطالي</Link></li>
-                                <li className='my-4 md:my-5 text-xs hover:opacity-70'><Link onClick={() => {
-                                    setShowDropDown(false)
-                                    setShowNav(false)
-                                }} href={"/"}>علب شنط كرافت</Link></li>
-                                <li className='my-4 md:my-5 text-xs hover:opacity-70'><Link onClick={() => {
-                                    setShowDropDown(false)
-                                    setShowNav(false)
-                                }} href={"/"}>علب المخبوزات والتقسيمات</Link></li>
+                                }} href={`/products?category=aalb-tort`}>
+                                    علب تورت
+                                </Link>
+                                </li>
+                                <li className='my-4 md:my-5 text-xs hover:opacity-70'>
+                                    <Link className='block' onClick={() => {
+                                        setShowDropDown(false)
+                                        setShowNav(false)
+                                    }} href={`/products?category=aalb-alshykolat`}>
+                                        علب الشيكولاته
+
+                                    </Link>
+                                </li>
+                                <li className='my-4 md:my-5 text-xs hover:opacity-70'>
+                                    <Link className='block' onClick={() => {
+                                        setShowDropDown(false)
+                                        setShowNav(false)
+                                    }} href={"/"}>
+                                        اطباق ايطالي
+                                    </Link>
+                                </li>
                             </ul>
                         </li>
                         <li className='md:mx-5 my-5 md:my-0'>

@@ -4,7 +4,7 @@ import React from 'react'
 function Footer() {
     return (
         <footer className='bg-color2 h-[420px] md:h-[300px] p-0'>
-            <div className="container mx-auto my-20 md:my-28 px-2 md:px-5 h-full  py-5">
+            <div className="container mx-auto  px-2 md:px-5 h-full  py-5">
                 <div className='flex flex-col md:flex-row justify-between items-center h-[65%] md:h-[85%]'>
                     <div className='flex flex-col md:flex-row items-center'>
                         <Link className='text-white mx-3 my-5 md:my-0 px-5 text-lg' href={"/"}>الصفحه الرئيسه</Link>
@@ -48,12 +48,12 @@ function Footer() {
                     </div>
 
                 </div>
-                <div className='flex mt-16 md:mt-0 flex-col md:flex-row justify-between items-center'>
-                    <div className='flex text-white'>
+                <div className='flex mt-16 md:mt-0 flex-col md:flex-row justify-between sm:items-center'>
+                    <div className='flex justify-between text-white'>
                         <p className='mx-5'>Terms of Service</p>
                         <p className='mx-5'>Privacy Policy</p>
                     </div>
-                    <span className='text-white mt-5 md:mt-0' dir='ltr'>© 2024 company. All rights reserved.</span>
+                    <span className='text-white text-center mt-5 md:mt-0' dir='ltr'>© 2024 company. All rights reserved.</span>
 
                 </div>
             </div>

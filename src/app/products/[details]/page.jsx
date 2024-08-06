@@ -25,7 +25,7 @@ async function page({ params }) {
   return (
     <main className='min-h-screen'>
       {res.status && (
-        <div className='container mx-auto my-20 md:my-28 px-2 md:px-5'>
+        <div className='container mx-auto mt-20 md:mt-28 px-2 md:px-5'>
           <div className='mb-5 text-sm text-gray-400'>
             <Link className='me-2' href={"/products"}>الاقسام</Link>
             {`>`}
