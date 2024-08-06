@@ -21,7 +21,6 @@ const getOffers = async () => {
 
 }
 
-
 export default async function Home() {
 
   const images = [
