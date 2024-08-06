@@ -40,7 +40,7 @@ export default async function Home() {
       <Sections />
       <SaleSlider>
         {images.map((item, index) => (
-          <Link className="relative h-[300px] md:h-[450px]" key={index} href={"/"}>
+          <Link className="relative h-[250px] sm:h-[300px] md:h-[450px]" key={index} href={"/"}>
             <Image  src={item.image} fill alt="" />
           </Link>
         ))}
